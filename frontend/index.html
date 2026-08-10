@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Road Damage AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            Road Damage <span>AI</span>
+        </div>
+
+        <p>
+            Detect cracks and potholes using Artificial Intelligence
+        </p>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="container">
+
+        <!-- Upload Section -->
+        <section class="upload-card">
+
+            <div class="upload-icon">
+                📷
+            </div>
+
+            <h2>Upload Road Image</h2>
+
+            <p class="upload-description">
+                Select an image of a road to analyze it using AI
+            </p>
+
+            <label for="imageInput" class="choose-btn">
+                Choose Image
+            </label>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                hidden
+            >
+
+            <p id="fileName" class="file-name">
+                No image selected
+            </p>
+
+            <button
+                type="button"
+                id="analyzeBtn"
+                class="analyze-btn"
+            >
+                Analyze Image
+            </button>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading">
+
+            <div class="spinner"></div>
+
+            <p>
+                AI is analyzing the image...
+            </p>
+
+        </div>
+
+
+        <!-- Results -->
+        <section class="results-container">
+
+            <!-- Original -->
+            <div class="image-card">
+
+                <h2>Original Image</h2>
+
+                <div class="image-container">
+
+                    <img
+                        id="originalImage"
+                        alt="Original road image"
+                    >
+
+                    <p id="originalPlaceholder">
+                        Your uploaded image will appear here
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI Result -->
+            <div class="image-card">
+
+                <h2>AI Result</h2>
+
+                <div class="image-container">
+
+                    <img
+                        id="resultImage"
+                        alt="AI segmentation result"
+                    >
+
+                    <p id="resultPlaceholder">
+                        AI result will appear here
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Detection Information -->
+        <section
+            id="detectionInfo"
+            class="detection-info"
+        >
+
+            <h2>Detection Result</h2>
+
+            <div class="info-box">
+
+                <div>
+                    <span class="info-title">
+                        Status
+                    </span>
+
+                    <span id="status">
+                        -
+                    </span>
+                </div>
+
+                <div>
+                    <span class="info-title">
+                        Model
+                    </span>
+
+                    <span>
+                        YOLO Segmentation
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Download -->
+        <button
+            type="button"
+            id="downloadBtn"
+            class="download-btn"
+        >
+            Download AI Result
+        </button>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Road Damage AI — Powered by Computer Vision
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
